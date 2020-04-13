@@ -19,9 +19,13 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
+    "@ngrx/store": "^9.0.0",
     "@swimlane/ngx-datatable": "^16.0.3",
+    "angular-l10n": "^6.6.1",
     "bootstrap": "4.1.1",
+    "localforage": "^1.7.3",
     "ngx-bootstrap": "^5.5.0",
+    "ngx-toastr": "^9.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

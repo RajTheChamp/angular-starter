@@ -1,0 +1,24 @@
+<div class="row no-gutters h-100">
+
+    <div class="col-6">
+        <div class="d-flex align-items-center h-100">
+            <div class="w-100">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3>Welcome</h3>
+                        <form [formGroup]="userDetails">
+                            <div class="form-group">
+                                <label>User Id</label>
+                                <input type="number" class="form-control" name="id" [formControl]="userDetails.controls['id']">
+                                <div *ngIf="userDetails.controls['id'].hasError('required') && formSubmitAttempt" class="form-error">User Id is required</div> 
+                            </div>
+                            <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

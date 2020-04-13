@@ -1,0 +1,20 @@
+<ng-container *ngIf="isLoaded">
+    <div class="row px-2">
+        <div class="col-md-3 px-2" *ngFor="let emp of data.data">
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="https://placeimg.com/200/200/people" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{emp.employee_name}}</h5>
+                            <p class="card-text mb-0"><small>Salary: {{emp.employee_salary}}</small></p>
+                            <p class="card-text mb-0"><small>Age: {{emp.employee_age}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

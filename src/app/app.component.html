@@ -1,7 +1,7 @@
-<div class="d-flex flex-column h-100">
-  <header>
+<!-- <div class="d-flex flex-column h-100"> -->
+<!-- <header> -->
 <!-- Fixed navbar -->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="#">Fixed navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,8 +26,8 @@
 </nav>
 </header>
 
-<!-- Begin page content -->
-<main role="main" class="flex-shrink-0">
+Begin page content -->
+<!-- <main role="main" class="flex-shrink-0">
 <div class="container">
   <h1 class="mt-5">Sticky footer with fixed navbar</h1>
   <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>main &gt; .container</code>.</p>
@@ -39,5 +39,42 @@
 <div class="container">
   <span class="text-muted">Place sticky footer content here.</span>
 </div>
-</footer></div>
-<router-outlet></router-outlet>
+</footer> -->
+
+<!-- <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select Country</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button ngbDropdownItem *ngFor="let item of languages" (click)="changeLange(item.lang)">{{ item.lang }}</button>
+    </div>
+  </div>
+
+  <h3>
+    {{ 'header' | translate:lang }}
+  </h3>
+  <p>
+    {{ 'content' | translate:lang }}
+  </p>
+  <p digits="1.2-2" currencyDisplay="symbol" l10nCurrency>{{ value }}</p>
+
+
+  <app-form></app-form>
+  <app-list></app-list> -->
+
+
+<!-- </div> -->
+<div class="loader-container">
+  <svg class="loader" viewBox="0 0 66 66">
+    <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+  </svg>
+</div>
+<app-top-nav></app-top-nav>
+<main role="main" class="flex-shrink-0 py-3 container-fluid">
+
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
+</footer>
