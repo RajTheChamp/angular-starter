@@ -1,0 +1,39 @@
+<ng-container *ngIf="isLoaded">
+    <div class="header-section container-fluid">
+        <h3 class="page-heading">Table</h3>
+    </div>
+    <div class="container-fluid content-section">
+        <div class="card">
+            <div class="card-body">
+                <h5>Employee List</h5>
+                <ngx-datatable [rows]="employeeList" class="mt-2" [columnMode]="ColumnMode.force" [headerHeight]="50"
+                    [footerHeight]="50" rowHeight="auto" [limit]="5" [sortType]="SortType.multi">
+                    <ngx-datatable-column [width]="30" [sortable]="false" [canAutoResize]="false" [draggable]="false"
+                        [resizeable]="false">
+                        <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected"
+                            let-onCheckboxChangeFn="onCheckboxChangeFn" class="datatable-checkbox">
+                            <div class="datatable-checkbox">
+                                <input type="checkbox" [checked]="isSelected" (change)="onCheckboxChangeFn($event)" />
+                            </div>
+                        </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-column name="ID" prop="id">
+                        <ng-template let-row="row" ngx-datatable-cell-template let-value="value">
+                            {{ value }}
+                        </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-column name="Name" prop="employee_name">
+                        <ng-template let-row="row" ngx-datatable-cell-template let-value="value">
+                            {{ value }}
+                        </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-column name="Salary" prop="employee_salary">
+                        <ng-template let-row="row" ngx-datatable-cell-template let-value="value">
+                            {{ value }}
+                        </ng-template>
+                    </ngx-datatable-column>
+                </ngx-datatable>
+            </div>
+        </div>
+    </div>
+</ng-container>

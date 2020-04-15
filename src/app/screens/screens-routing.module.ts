@@ -5,6 +5,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ErrorComponent } from './errors/errors.component';
 import { AuthGuardService } from '../shared/services/auth-guard.service';
 import { LoginComponent } from './login/login.component';
+import { TableComponent } from './table/table.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path:'tables',
+    component:TableComponent,
+    canActivate:[AuthGuardService]
   }
   
 ];

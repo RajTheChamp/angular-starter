@@ -16,6 +16,7 @@ export class AppComponent {
   @Language() lang: string;
   @DefaultLocale() defaultLocale: string;
   @Currency() currency: string;
+  collapedSideBar: boolean;
   constructor(private dynamicScriptLoader: DynamicScriptLoaderService, public localeService: LocaleService, private toast: ToastrService) { }
 
 
@@ -23,6 +24,10 @@ export class AppComponent {
     // Just call your load scripts function with scripts you want to load
     this.loadScripts();
     console.log(environment.variables.baseApiUrl);
+  }
+
+  receiveCollapsed($event) {
+    this.collapedSideBar = $event;
   }
 
   private loadScripts() {

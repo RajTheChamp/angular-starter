@@ -4,10 +4,89 @@ html {
 
 body {
     height: 100% !important;
+    background-color: $gray-200 !important;
 }
 
 app-root {
     display: flex;
     flex-direction: column !important;
     height: 100% !important;
+}
+
+.main-container {
+    margin-top: 64px;
+    margin-left: 235px;
+    // padding: 15px;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    overflow: hidden;
+    height: 100% !important;
+
+    &.without-sidenav {
+        margin-left: 60px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .main-container {
+        margin-left: 0px !important;
+    }
+}
+
+@media print {
+    .main-container {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+}
+
+
+.footer {
+    margin-top: 40px;
+    margin-left: 235px;
+    // padding: 15px;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    overflow: hidden;
+
+    &.without-sidenav {
+        margin-left: 60px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .footer {
+        margin-left: 0px !important;
+    }
+}
+
+@media print {
+    .footer {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+}
+
+
+.header-section{
+    padding:2rem 0 4rem 0;
+    background-color: $primary;
+
+   .page-heading{
+        color: $white !important;
+    }
+}
+
+.content-section{
+    margin-top: -2rem;
 }

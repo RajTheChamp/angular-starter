@@ -6,8 +6,8 @@ import { ClientStoreService } from './client-store.service';
 })
 export class UsersService {
 
-  isUserLogged: boolean;
-  
+  public isUserLogged = false;
+
   constructor(private clientStore: ClientStoreService) { }
 
   login(id: number) {

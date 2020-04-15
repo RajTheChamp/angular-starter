@@ -25,6 +25,7 @@ import { BusyIndictorInterceptor } from './shared/interceptors/busyloader.interc
 import { AuthGuardService } from './shared/services/auth-guard.service';
 import { LoginComponent } from './screens/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 export function app_Initialize(appInitService: AppInitService) {
   return () => appInitService.init();

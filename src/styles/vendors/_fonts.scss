@@ -5,3 +5,11 @@
   src: local('Montserrat'),
   url('assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'),
 }
+
+@font-face {
+  font-family: "Open Sans";
+  font-normal: normal;
+  font-weight: 400;
+  src: local('Open-Sans'),
+  url('assets/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype'),
+}
