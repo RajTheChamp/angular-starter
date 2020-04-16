@@ -1,0 +1,28 @@
+[
+  {
+    "theme": "brand1",
+    "domain": {
+      "uri": "www.xyz.com",
+      "phone": 1234567890,
+      "support": "eg@xyz.com"
+    },
+    "features": [
+      "dashboard",
+      "profile",
+      "subscription"
+    ]
+  },
+  {
+    "theme": "brand2",
+    "domain": {
+      "uri": "www.abc.com",
+      "phone": 9876543210,
+      "support": "eg@abc.com"
+    },
+    "features": [
+      "dashboard",
+      "profile",
+      "subscription"
+    ]
+  }
+]

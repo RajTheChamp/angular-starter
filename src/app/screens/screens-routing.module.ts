@@ -1,3 +1,4 @@
+import { TranslateComponent } from './translate/translate.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -12,28 +13,33 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate:[AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'employee',
     component: EmployeeComponent,
-    canActivate:[AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'error',
     component: ErrorComponent,
-    canActivate:[AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'login',
     component: LoginComponent
   },
   {
-    path:'tables',
-    component:TableComponent,
-    canActivate:[AuthGuardService]
+    path: 'tables',
+    component: TableComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'translate',
+    component: TranslateComponent,
+    canActivate: [AuthGuardService]
   }
-  
+
 ];
 
 @NgModule({

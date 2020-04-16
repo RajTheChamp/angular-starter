@@ -1,0 +1,30 @@
+<div class="header-section container-fluid">
+    <h3 class="page-heading">{{ 'header' | translate:lang }}</h3>
+    <div class="d-flex justify-content-end">
+        <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-basic">
+                Languages <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                <ng-container *ngFor="let language of languages">
+                    <li role="menuitem"><a class="dropdown-item"
+                            (click)="changeLange(language.lang)">{{language.lang}}</a></li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container-fluid content-section">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ 'configittitle' | translate:lang }}</h5>
+                    <p>{{ 'configit' | translate:lang }}</p>
+                    <p digits="1.2-2" currencyDisplay="symbol" l10nCurrency>657028</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

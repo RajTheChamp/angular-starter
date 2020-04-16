@@ -2,7 +2,7 @@
     <a class="navbar-brand" routerLink='/'>
         <img src="assets/images/logo.jpg" height="30" class="d-inline-block align-top" alt="">
         <!-- Bootstrap -->
-      </a>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
         aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"
         *ngIf="userService.isUserLogged">
@@ -10,7 +10,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor02" *ngIf="userService.isUserLogged">
-        <ul class="navbar-nav mr-auto">
+        <!-- <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
@@ -23,8 +23,20 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
+        </ul> -->
+        <form class="form-inline search-form ml-auto">
+            <div class="input-group">
+                <input type="text" class="form-control boder-0" placeholder="Search">
+                <div class="input-group-append">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+        <ul class="navbar-nav ml-4">
+            <li class="mt-1">
+                <a><i class="fas fa-bell"></i></a>
+                <!-- <span class="badge badge-danger badge-counter">3+</span> -->
+            </li>
             <li class="nav-item dropdown" dropdown>
                 <a class="nav-link dropdown-toggle" href (click)="false" id="navbardrop" dropdownToggle>
                     Sahana Chandra

@@ -1,4 +1,6 @@
 {
-    "header": "Bonjour à tous",
-    "content":"internationalisation des applications est un domaine de développement aux multiples facettes, qui vise à rendre les applications disponibles et conviviales à un public mondial. Cette page décrit les outils d'internationalisation d'Angular (i18n), qui peuvent vous aider à rendre votre application disponible en plusieurs langues."
+    "header": "Bonjour à tous.",
+    "content":"internationalisation des applications est un domaine de développement aux multiples facettes, qui vise à rendre les applications disponibles et conviviales à un public mondial. Cette page décrit les outils d'internationalisation d'Angular (i18n), qui peuvent vous aider à rendre votre application disponible en plusieurs langues.",
+    "configit":"Configit crée des solutions de configuration pour les entreprises de fabrication afin de maîtriser les défis liés à la mise sur le marché plus rapide de produits et services configurables et à les vendre, les fabriquer et les entretenir plus efficacement. Reconnue par les sociétés de fabrication mondiales pour leurs fonctions critiques, la plate-forme de configuration avancée de Configit, alimentée par la technologie multi-brevetée Virtual Tabulation®, gère les produits les plus complexes du marché.",
+    "configittitle":"Configit"
 }

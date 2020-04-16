@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/shared/services/data.service';
 import { throwError } from 'rxjs';
+import { dasboardOptions } from '../../shared/utils/constants/dashboard-options';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +13,8 @@ export class DashboardComponent implements OnInit {
   isLoaded: boolean;
   types = ['success', 'info', 'warning', 'danger'];
   stacked: any[] = [];
-  employeesdata: any[] = [];
+  dashboardoptions: any[] = [];
+  stackedValue = [24, 22, 12, 20];
 
   constructor(private dataService: DataService) { }
 
@@ -20,19 +22,20 @@ export class DashboardComponent implements OnInit {
     try {
       this.isLoaded = false;
       this.data = await this.dataService.get();
-      this.employeesdata = this.data.data.filter(emp=>(emp.id<=4));
+      this.dashboardoptions = dasboardOptions;
       this.loadProgessBarData();
       this.isLoaded = true;
-      console.log(this.data)
+      console.log(this.data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
       throw error;
     }
   }
 
   loadProgessBarData() {
-    for (let i = 0; i < this.types.length + 1; i++) {
-      let value = Math.floor(Math.random() * 27 + 3);
+    for (let i = 0; i < this.types.length; i++) {
+      // let value = Math.floor(Math.random() * 27 + 3);
+      let value = this.stackedValue[i];
       this.stacked.push({
         value,
         type: this.types[i],

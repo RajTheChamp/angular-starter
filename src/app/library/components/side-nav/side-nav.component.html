@@ -16,62 +16,62 @@
             <i class="fas fa-edit"></i>&nbsp;
             <span>{{ 'Forms'  }}</span>
         </a>
-        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/bs-element']" class="list-group-item">
+        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/translate']" class="list-group-item">
             <i class="fas fa-desktop"></i>&nbsp;
-            <span>{{ 'Bootstrap Element'  }}</span>
+            <span>{{ 'Translation'  }}</span>
         </a>
         <a [routerLinkActive]="['router-link-active']" [routerLink]="['/grid']" class="list-group-item">
             <i class="fas fa-wrench"></i>&nbsp;
             <span>{{ 'Bootstrap Grid'  }}</span>
         </a>
         <a [routerLinkActive]="['router-link-active']" [routerLink]="['/components']" class="list-group-item">
-            <i class="fa fa-th-list"></i>&nbsp;
+            <i class="fas fa-th-list"></i>&nbsp;
             <span>{{ 'Component'  }}</span>
         </a>
         <div class="nested-menu">
             <a (click)="addExpandClass('pages')" class="list-group-item">
-                <i class="fa fa-plus"></i>&nbsp;
+                <i class="fas fa-plus"></i>&nbsp;
                 <span>{{ 'Menu'  }}</span>
             </a>
             <li [class.expand]="showMenu === 'pages'" class="nested">
                 <ul class="submenu">
                     <li>
                         <a href="javascript:void(0)">
-                            <i class="fa fa-monument"></i>&nbsp;
+                            <i class="fas fa-monument"></i>&nbsp;
                             <span>{{ 'Submenu'  }}</span>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:void(0)">
-                            <i class="fa fa-monument"></i>&nbsp;
+                            <i class="fas fa-monument"></i>&nbsp;
                             <span>{{ 'Submenu'  }}</span>
                         </a>
                     </li>
                     <li>
                         <a href="javascript:void(0)">
-                            <i class="fa fa-monument"></i>&nbsp;
+                            <i class="fas fa-monument"></i>&nbsp;
                             <span>{{ 'Submenu'  }}</span>
                         </a>
                     </li>
                 </ul>
             </li>
         </div>
-        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/blank-page']" class="list-group-item">
-            <i class="fa fa-file-o"></i>&nbsp;
+        <!-- <a [routerLinkActive]="['router-link-active']" [routerLink]="['/blank-page']" class="list-group-item">
+            <i class="fas fa-file-o"></i>&nbsp;
             <span>{{ 'Blank Page'  }}</span>
-        </a>
-        <a class="list-group-item" href="http://www.strapui.com/">
-            <i class="fa fa-caret-down"></i>&nbsp;
+        </a> -->
+        <a class="list-group-item" href>
+            <i class="fas fa-caret-down"></i>&nbsp;
             <span>{{ 'More Themes'  }}</span>
         </a>
 
         <div class="header-fields">
             <a (click)="rltAndLtr()" class="list-group-item">
-                <span><i class="fa fa-arrows-h"></i>&nbsp; RTL/LTR</span>
+                <span><i class="fas fa-arrows-h"></i>&nbsp; RTL/LTR</span>
             </a>
             <div class="nested-menu">
                 <a (click)="addExpandClass('languages')" class="list-group-item">
-                    <span><i class="fa fa-language"></i>&nbsp; {{ 'Language'  }} <b class="caret"></b></span>
+                    <span><i class="fas fa-language"></i>&nbsp; {{ 'Language'  }} <b class="caret"></b></span>
                 </a>
                 <li [class.expand]="showMenu === 'languages'" class="nested">
                     <ul class="submenu">
@@ -115,7 +115,7 @@
             </div>
             <div class="nested-menu">
                 <a (click)="addExpandClass('profile')" class="list-group-item">
-                    <span><i class="fa fa-user"></i>&nbsp; John Smith</span>
+                    <span><i class="fas fa-user"></i>&nbsp; John Smith</span>
                 </a>
                 <li [class.expand]="showMenu === 'profile'" class="nested">
                     <ul class="submenu">

@@ -250,7 +250,7 @@ $container-max-widths: (
 
 // Spacing
 
-$spacer: 1rem !default;
+$spacer: .8rem !default;
 $spacers: () !default;
 $spacers: map-merge((
   0: 0,

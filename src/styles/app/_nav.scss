@@ -220,3 +220,40 @@ $topnav-background-color: $white;
         display: none;
     }
 }
+
+.search-form {
+    background-color: darken($color: $white, $amount: 2%);
+    color: $black;
+    border:1px solid darken($color: $white, $amount: 10%) ;
+
+    .form-control {
+        background-color: transparent;
+        font-size: 0.95rem !important;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        color: $black;
+        min-width: 350px !important;
+        border:0;
+
+        &::placeholder {
+            color: $gray-600;
+            opacity: 1;
+        }
+    }
+
+    .input-group-append{
+        button {
+            background-color: transparent;
+            color: $black;
+            border: 0;
+            padding: 0.6rem 0.9rem 0.3rem 0.9rem !important;
+
+            [class^="fa-"],
+            [class*="fa-"] {
+                font-size: 1.1rem;
+                padding: 0.2rem0 0rem 0.2rem;
+            }
+        }
+    }
+
+}
