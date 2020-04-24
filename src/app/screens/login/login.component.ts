@@ -1,3 +1,4 @@
+import { ThemeLoaderService } from './../../shared/services/theme-loader.service';
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/shared/services/users.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -13,8 +14,12 @@ export class LoginComponent implements OnInit {
   id: number;
   userDetails: FormGroup;
 
-  constructor(private userService: UsersService, private formBuilder: FormBuilder, private router: Router, 
-    private route: ActivatedRoute) { }
+  constructor(
+    private userService: UsersService,
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute,
+    private themeLoaderService: ThemeLoaderService) { }
 
   ngOnInit() {
     this.loadData();
@@ -23,13 +28,16 @@ export class LoginComponent implements OnInit {
   loadData() {
     this.userDetails = this.formBuilder.group({
       'id': ['', Validators.required],
-    })
+    });
   }
 
   async login() {
     if (this.userDetails.value.id != null) {
       this.userService.login(this.userDetails.value.id);
-      this.router.navigateByUrl(this.router.parseUrl(this.route.snapshot.queryParams.redirectUrl||'/'))
+      this.router.navigateByUrl(this.router.parseUrl(this.route.snapshot.queryParams.redirectUrl || '/'));
+      // const config = this.themeLoaderService.getTheme();
+      // console.log(config);
+      // this.themeLoaderService.load(config[0].theme);
     }
   }
 

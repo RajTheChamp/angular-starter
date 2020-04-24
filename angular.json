@@ -28,9 +28,16 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "src/styles.scss"
+              {
+                "input": "src/styles/brand1/styles.scss",
+                "bundleName": "brand1",
+                "lazy": true
+              },
+              {
+                "input": "src/styles/brand2/styles.scss",
+                "bundleName": "brand2",
+                "lazy": true
+              }
             ],
             "scripts": []
           },

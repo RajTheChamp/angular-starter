@@ -5,11 +5,20 @@ import { AuthGuardService } from './shared/services/auth-guard.service';
 
 
 const routes: Routes = [
-
+  // {
+  //   // path: ':brand',
+  //   // children: [
+  //   //   {
+  //       path: '',
+  //       redirectTo: '/brand1/dashboard',
+  //       pathMatch: 'full'
+  //   //   }
+  //   // ]
+  // }
   {
     path: '',
-    redirectTo:'/dashboard',
-    pathMatch:'full'
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
   }
 ];
 

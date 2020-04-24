@@ -1,8 +1,9 @@
 .navbar{
     box-shadow: $box-shadow-sm;
+    background-color: $nav-background-color;
 }
 
-$topnav-background-color: $white;
+$topnav-background-color: $nav-background-color;
 .sidebar {
     border-radius: 0;
     position: fixed;
@@ -32,7 +33,7 @@ $topnav-background-color: $white;
             background: $topnav-background-color;
             border: 0;
             border-radius: 0;
-            color: #999;
+            color: $nav-text-colour;
             text-decoration: none;
 
             .fas {
@@ -42,12 +43,12 @@ $topnav-background-color: $white;
 
         a:hover {
             background: darken($topnav-background-color, 5%);
-            color:darken($topnav-background-color, 75%);
+            color: $nav-text-colour;
         }
 
         a.router-link-active {
             background: darken($topnav-background-color, 5%);
-            color:darken($topnav-background-color, 90%);
+            color: $nav-text-colour;
         }
 
         .header-fields {
@@ -193,7 +194,7 @@ $topnav-background-color: $white;
     cursor: pointer;
     padding: 12px;
     bottom: 0;
-    color: #999;
+    color: $nav-text-colour;
     background: darken($topnav-background-color, 5%);;
 
     i {
