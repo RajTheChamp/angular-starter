@@ -8,49 +8,6 @@ import { AuthGuardService } from '../shared/services/auth-guard.service';
 import { LoginComponent } from './login/login.component';
 import { TableComponent } from './table/table.component';
 
-
-// const routes: Routes = [
-//   {
-//     path: 'login',
-//     component: LoginComponent
-//   },
-//   {
-//     path: ':brand',
-//     children: [
-//       {
-//         path: 'dashboard',
-//         children: [
-//           {
-//             path: '',
-//             component: DashboardComponent,
-//             canActivate: [AuthGuardService]
-//           },
-//           {
-//             path: 'employee',
-//             component: EmployeeComponent,
-//             canActivate: [AuthGuardService]
-//           },
-//           {
-//             path: 'error',
-//             component: ErrorComponent,
-//             canActivate: [AuthGuardService]
-//           },
-//           {
-//             path: 'tables',
-//             component: TableComponent,
-//             canActivate: [AuthGuardService]
-//           },
-//           {
-//             path: 'translate',
-//             component: TranslateComponent,
-//             canActivate: [AuthGuardService]
-//           }
-//         ]
-//       }
-//     ]
-//   }
-// ];
-
 const routes: Routes = [
   {
     path: 'login',

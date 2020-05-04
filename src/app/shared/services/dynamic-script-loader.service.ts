@@ -36,6 +36,10 @@ export class DynamicScriptLoaderService {
     return Promise.all(promises);
   }
 
+  /**
+   * Load the mentioned scripts
+   * @param name script name
+   */
   loadScript(name: string) {
     return new Promise((resolve, reject) => {
       if (!this.scripts[name].loaded) {

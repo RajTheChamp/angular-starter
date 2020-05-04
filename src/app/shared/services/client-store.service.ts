@@ -15,7 +15,6 @@ export class ClientStoreService {
     this.handleError = this.handleError.bind(this);
   }
 
-
   public setItem(key: any, value: any, seralise = data => data) {
     localforage.setItem(key, JSON.parse(JSON.stringify(seralise(value))))
       .catch(this.handleError);
@@ -37,9 +36,9 @@ export class ClientStoreService {
     }
   }
 
-  public handleError(error: any){
-    if(error instanceof DOMException){
-      this,this.toastr.warning('Not enouh storage to store locale data, reload will erase data');
+  public handleError(error: any) {
+    if (error instanceof DOMException) {
+      this, this.toastr.warning('Not enouh storage to store locale data, reload will erase data');
     }
   }
 }

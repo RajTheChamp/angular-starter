@@ -26,7 +26,4 @@ import { faSquare } from '@fortawesome/free-solid-svg-icons';
 })
 export class LibraryModule {
 
-  // constructor(private fontLibrary: FaIconLibrary) {
-  //     fontLibrary.addIcons(faSquare);
-  // }
 }

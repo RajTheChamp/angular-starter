@@ -6,8 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-nav',
-  templateUrl: './top-nav.component.html',
-  styleUrls: ['./top-nav.component.scss']
+  templateUrl: './top-nav.component.html'
 })
 export class TopNavComponent implements OnInit {
 

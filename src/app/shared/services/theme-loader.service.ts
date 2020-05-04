@@ -58,6 +58,8 @@ export class ThemeLoaderService {
     themes.forEach((theme) => promises.push(this._loadTheme(theme)));
     return Promise.all(promises);
   }
+
+
   /**
    * Checks if given theme is already loaded
    * @param name name of theme
@@ -68,6 +70,7 @@ export class ThemeLoaderService {
     }
     return false;
   }
+
   /**
    * Attach theme tag through Renderer2
    * @param name name of theme
@@ -85,6 +88,8 @@ export class ThemeLoaderService {
     script.src = this._themes[name].name + '.js';
     return script;
   }
+
+
   /**
    * get resolve params based on themes status
    * @param name name of script
@@ -97,6 +102,8 @@ export class ThemeLoaderService {
       loaded: status,
     };
   }
+
+
   /**
    * Loads themes
    * @param name name of script
@@ -118,25 +125,9 @@ export class ThemeLoaderService {
     });
   }
 
-  /**
-   * Get theme name API and host
-   */
-  // getTheme() {
-  //   let brandName;
-  //   this.activatedRoute.queryParams.subscribe(params => {
-  //     if (params['brand']) {
-  //       brandName = params['brand']
-  //     } else {
-  //       brandName = 'brand1';
-  //     }
-  //     console.log('which brand' + brandName); // Print the parameter to the console. 
-  //   });
-  //   const theme = this.configs.filter(selectedtheme => selectedtheme.theme === brandName);
-  //   return theme;
-  // }
 
   getTheme() {
-    const theme = this.configs[Math.floor(Math.random() * this.configs.length)];
+    const theme  = this.configs.filter(selectedtheme => selectedtheme.theme === 'brand1')[0];
     this.loadedTheme = theme;
     return theme;
   }

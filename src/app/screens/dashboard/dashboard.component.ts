@@ -34,7 +34,6 @@ export class DashboardComponent implements OnInit {
 
   loadProgessBarData() {
     for (let i = 0; i < this.types.length; i++) {
-      // let value = Math.floor(Math.random() * 27 + 3);
       let value = this.stackedValue[i];
       this.stacked.push({
         value,
