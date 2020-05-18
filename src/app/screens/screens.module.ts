@@ -15,11 +15,12 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateComponent } from './translate/translate.component';
 import { L10nLoader, LocalizationModule } from 'angular-l10n';
+import { FormsComponent } from './forms/forms.component';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, EmployeeComponent, ErrorComponent, LoginComponent, TableComponent, TranslateComponent],
+  declarations: [DashboardComponent, EmployeeComponent, ErrorComponent, LoginComponent, TableComponent, TranslateComponent, FormsComponent],
   imports: [
     CommonModule,
     ScreensRoutingModule,

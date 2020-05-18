@@ -1,3 +1,4 @@
+import { FormsComponent } from './forms/forms.component';
 import { TranslateComponent } from './translate/translate.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -37,7 +38,12 @@ const routes: Routes = [
     path: 'translate',
     component: TranslateComponent,
     canActivate: [AuthGuardService]
-  }
+  },
+  {
+    path: 'forms',
+    component: FormsComponent,
+    canActivate: [AuthGuardService]
+  },
 
 ];
 
