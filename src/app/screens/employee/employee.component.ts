@@ -19,9 +19,9 @@ export class EmployeeComponent implements OnInit {
   employeedetails: any;
   @ViewChild(DatatableComponent, { static: false }) table: DatatableComponent;
   modalTitle: string;
-  constructor(private dataService: DataService, 
-     private modalService: BsModalService, private formBuilder: FormBuilder
-    ) { }
+  constructor(private dataService: DataService,
+    private modalService: BsModalService, private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit() {
     console.log("employee loaded");
@@ -31,7 +31,7 @@ export class EmployeeComponent implements OnInit {
   }
 
   async get() {
-    this.data = await this.dataService.get();
+    this.data = await this.dataService. get();
     this.employeeList = this.data.data;
     console.log(this.employeeList);
     console.log(this.data);
@@ -51,7 +51,11 @@ export class EmployeeComponent implements OnInit {
   }
 
   openModal(template: TemplateRef<any>) {
-     this.modalRef = this.modalService.show(template);
+    this.modalRef = this.modalService.show(template);
+  }
+
+  saveToList() {
+
   }
 
 }

@@ -9,11 +9,13 @@ import { url } from '../utils/constants/url';
 export class DataService {
 
   constructor(private wrapperService: WrapperService) { }
- 
- async get():Promise<any> {
-  //  return await this.wrapperService.callApi('get','http://dummy.restapiexample.com/api/v1/employees');
-  
-  return await this.wrapperService.callApi('get',url.sample);
+
+  async get(): Promise<any> {
+    return await this.wrapperService.callApi('get', url.sample);
+  }
+
+  async  getDynamicformData(): Promise<any> {
+    return await this.wrapperService.callApi('get', url.dynamicform);
   }
 
 }

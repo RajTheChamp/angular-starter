@@ -22,21 +22,21 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
               {
+                "inject": false,
                 "input": "src/styles/brand1/styles.scss",
-                "bundleName": "brand1",
-                "lazy": true
+                "bundleName": "brand1"
               },
               {
+                "inject": false,
                 "input": "src/styles/brand2/styles.scss",
-                "bundleName": "brand2",
-                "lazy": true
+                "bundleName": "brand2"
               }
             ],
             "scripts": []
@@ -54,7 +54,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -137,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "angular-starter-template"
+  "defaultProject": "angular-starter-template",
+  "cli": {
+    "analytics": false
+  }
 }

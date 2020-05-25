@@ -28,7 +28,7 @@
             <i class="fas fa-th-list"></i>&nbsp;
             <span>{{ 'Component'  }}</span>
         </a>
-        <div class="nested-menu">
+        <!-- <div class="nested-menu">
             <a (click)="addExpandClass('pages')" class="list-group-item">
                 <i class="fas fa-plus"></i>&nbsp;
                 <span>{{ 'Menu'  }}</span>
@@ -55,7 +55,7 @@
                     </li>
                 </ul>
             </li>
-        </div>
+        </div> -->
         <!-- <a [routerLinkActive]="['router-link-active']" [routerLink]="['/blank-page']" class="list-group-item">
             <i class="fas fa-file-o"></i>&nbsp;
             <span>{{ 'Blank Page'  }}</span>
@@ -65,7 +65,7 @@
             <span>{{ 'More Themes'  }}</span>
         </a>
 
-        <div class="header-fields">
+        <!-- <div class="header-fields">
             <a (click)="rltAndLtr()" class="list-group-item">
                 <span><i class="fas fa-arrows-h"></i>&nbsp; RTL/LTR</span>
             </a>
@@ -142,7 +142,7 @@
                     </ul>
                 </li>
             </div>
-        </div>
+        </div> -->
     </div>
     <div (click)="toggleCollapsed()" [ngClass]="{ collapsed: collapsed }" class="toggle-button">
         <i class="fas fa-angle-double-{{ collapsed ? 'right' : 'left' }}"></i>&nbsp;

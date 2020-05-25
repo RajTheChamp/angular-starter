@@ -10,7 +10,7 @@ export class ClientStoreService {
 
   private store: any;
 
-  constructor(private toastr: ToastrService) {
+  constructor() {
     this.store = localforage.config(clientStoreConfig);
     this.handleError = this.handleError.bind(this);
   }
@@ -38,7 +38,7 @@ export class ClientStoreService {
 
   public handleError(error: any) {
     if (error instanceof DOMException) {
-      this, this.toastr.warning('Not enouh storage to store locale data, reload will erase data');
+      // this, this.toastr.warning('Not enouh storage to store locale data, reload will erase data');
     }
   }
 }

@@ -17,10 +17,12 @@ import { ToastrService } from 'ngx-toastr';
 export class AppErrorHandler implements ErrorHandler {
 
     router: Router;
-    constructor(private injector: Injector, private toaster: ToastrService) { }
+    constructor(private injector: Injector
+        // , private toaster: ToastrService
+    ) { }
 
     async handleError(error: any) {
-        this.router=this.injector.get(Router);
+        this.router = this.injector.get(Router);
         const document = this.injector.get(DOCUMENT);
         console.log(error);
 
@@ -38,7 +40,7 @@ export class AppErrorHandler implements ErrorHandler {
             }
         } else {
             //A client-side or network error occurred.	 
-           this.router.navigate(['/error']);
+            this.router.navigate(['/error']);
         }
 
 
@@ -48,7 +50,7 @@ export class AppErrorHandler implements ErrorHandler {
         if (htttpError.status) {
             //Based on the error ststus code navigate or notify the error message 
             if (htttpError.status == 420) {
-                this.toaster.error("Something went wrong.");
+                // this.toaster.error("Something went wrong.");
             }
         } else {
             this.router.navigate(['/error']);

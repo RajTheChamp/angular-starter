@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   constructor(
     private dynamicScriptLoader: DynamicScriptLoaderService,
     public localeService: LocaleService,
-    private toast: ToastrService,
+    // private toast: ToastrService,
     private themeLoaderService: ThemeLoaderService) { }
 
 

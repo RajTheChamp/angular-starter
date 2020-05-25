@@ -1,1 +1,45 @@
-<h1>Form works</h1>
+<ng-container *ngIf="isLoaded">
+    <div class="header-section container-fluid">
+        <h3 class="page-heading">Forms</h3>
+    </div>
+    <div class="container-fluid content-section">
+        <div class="card">
+            <div class="card-body">
+                <h5>Dynamic forms</h5>
+                <form [formGroup]="dynamicFormGroup" (ngSubmit)="onSubmit()">
+                    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2">
+                        <ng-container *ngFor="let formelement of dynamicFormData.data">
+                            <div [ngSwitch]="formelement.controlType">
+                                <ng-container *ngSwitchCase="'textBox'">
+                                    <div class="col">
+                                        <input type="text" formControlName="{{formelement.label}}" />
+                                    </div>
+                                </ng-container>
+                                <ng-container *ngSwitchCase="'checkbox'">
+                                 <div class="col" >
+                                    <div class="datatable-checkbox"  *ngFor="let option of formelement.options">
+                                        <input type="checkbox" />
+                                        <label>{{option}}</label>
+                                    </div>
+                                    
+                                </div>
+                                </ng-container>
+                                <ng-container *ngSwitchCase="'select'">
+                                    <div class="col">
+                                        <select formControlName="{{formelement.label}}">
+                                            <option *ngFor="let option of formelement.options">
+                                                {{option}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </ng-container>
+                    </div>
+                    <input type="submit" value="save" />
+                </form>
+
+            </div>
+        </div>
+    </div>
+</ng-container>

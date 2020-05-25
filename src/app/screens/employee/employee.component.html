@@ -42,7 +42,7 @@
         </button>
     </div>
     <div class="modal-body">
-        <form [formGroup]="employeedetails" (ngSubmit)="saveToList(itemform)">
+        <form [formGroup]="employeedetails" (ngSubmit)="saveToList()">
             <div class="form-group">
                 <label>Employee ID</label>
                 <input type="text" class="form-control" formControlName="id">
@@ -55,6 +55,6 @@
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" type="submit">Add</button>
-        <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Close</button>
+        <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
     </div>
 </ng-template>

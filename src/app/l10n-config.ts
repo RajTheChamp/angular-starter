@@ -1,4 +1,4 @@
-import { L10nConfig, ProviderType, StorageStrategy } from "angular-l10n";
+import { L10nConfig, ProviderType, StorageStrategy } from 'angular-l10n';
 
 
 export const l10nConfig: L10nConfig = {

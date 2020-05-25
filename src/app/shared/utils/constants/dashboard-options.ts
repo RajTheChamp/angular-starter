@@ -19,4 +19,28 @@ export const dasboardOptions = [
         value: 5342,
         color: 'danger'
     },
+];
+
+export const data = [
+    {
+        "controlType": "textBox",
+        "label": "Name",
+        "order": 1,
+        "options": [],
+        "required": true,
+    },
+    {
+        "controlType": "chekbox",
+        "label": "Languages",
+        "order": 1,
+        "options": [".Net core", "Java", ".net framewok"],
+        "required": false,
+    },
+    {
+        "controlType": "select",
+        "label": "UI",
+        "order": 3,
+        "options": ["Angular", "React", "Aurelia"],
+        "required": false,
+    }
 ]

@@ -22,7 +22,7 @@ export class BusyIndictorInterceptor implements HttpInterceptor {
                     loadingContainer.style.display = 'none';
                 }
             },
-            (observer: any)=> {
+            (observer: any) => {
                 loadingContainer.style.display = 'none';
             }
         ))

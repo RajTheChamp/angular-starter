@@ -6,13 +6,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
 
   id: number;
   userDetails: FormGroup;
+  formSubmitAttempt: boolean;
 
   constructor(
     private userService: UsersService,
@@ -26,12 +26,14 @@ export class LoginComponent implements OnInit {
   }
 
   loadData() {
+    this.formSubmitAttempt = false;
     this.userDetails = this.formBuilder.group({
       'id': ['', Validators.required],
     });
   }
 
   async login() {
+    this.formSubmitAttempt = true;
     if (this.userDetails.value.id != null) {
       this.userService.login(this.userDetails.value.id);
       this.router.navigateByUrl(this.router.parseUrl(this.route.snapshot.queryParams.redirectUrl || '/'));
